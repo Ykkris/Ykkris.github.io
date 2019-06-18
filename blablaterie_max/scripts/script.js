@@ -119,7 +119,7 @@ function onSignIn(googleUser) {
 
             // Envoie AJAX
             var xhr = new XMLHttpRequest();
-            xhr.open("POST", 'http://192.168.1.45/blablaterie/testingAjax.php', true);
+            xhr.open("GET", 'testing.Ajax.php', true);
 
             xhr.onreadystatechange = function() { // Call a function when the state changes.
                 if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {

@@ -678,11 +678,12 @@ nav {
 /* Overlay */
 
 .body-overlay {
-    background-color: gray;
+    background-color: #E5E5E5;
     position: fixed;
     width: 100vw;
     height: 100vh;
     border-radius: 30px;
+    overflow: hidden;
 }
 
 .fav-close {
@@ -693,23 +694,158 @@ nav {
     font-family: 'Icomoon';
     color: #000000;
     display: block;
-    margin-right: 5vw;
-    margin-top: 2vh
+    margin-left: 91vw;
+    margin-top: 1vh;
+    position: absolute;
+    z-index: 1000;
+}
+
+.img-overlay-int{
+    width: 100vw;
+    height: 40vh;
+    object-fit: cover;
+    top: 0;
+    z-index: -1;
 }
 
 .resume-int {
-    width: 294px;
-    height: 132px;
+    height: 15vh;
+
+    display: block;
+    margin-left: 3vw;
+}
+
+.resume-int p  {
+    font-family: Luciole;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.resume-int p:first-child {
+    font-family: Luciole;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.resume-int p:nth-child(3) {
+    margin-left: 6vw
+}
+
+.resume-int p:last-child span {
+    color: red
+}
+
+.resume-int p span {
+    font-family: 'Icomoon';
+    color: #000000;
+}
+
+.resume-slider {
+    width: 99vw;
+    height: 12vh;
+
+    /* display: flex; */
+    margin-top: 7vh;
+    margin-left: 3vw;
+}
+
+.resume-slider img {
+    width: 46vw;
+    object-fit: cover;
+    align-items: center
+}
+
+/* Overlay Blablaterie */
+
+.body-overlay-blabla {
+    background-color: #E5E5E5;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.lieux-plus {
+    position: absolute;
+    width: 88vw;
+    height: 5vh;
+    left: 1vw;
+    top: 1vh;
+
+    background: #FEEB42;
+    border-radius: 27px;
+
+    font-family: 'Luciole';
+    font-size: 21px;
+    line-height: 25px;
+}
+
+.resume-blabla {
+    width: 99vw;
+    min-height: 25vh;
 
     display: flex;
+
+    margin-top: 7vh;
+}
+
+.resume-blabla h1 {
+    font-family: 'Luciole';
+    font-size: 16px;
+    line-height: 25px;
+
+    border: #000000 2px solid;
+
+    text-align: center
+}
+
+.resume-blabla p {
+    margin-top: 1vh;
+    margin-left: 2vw
+}
+
+.blabla-cat {
+    flex: auto;
+}
+
+.blabla-int {
+    flex: auto;
+    border-left: #000000 2px solid;
+}
+
+.blabla-clock {
+    width: 99vw;
+    min-height: 25vh;
+
     margin-top: 2vh;
-    margin-left: 2vw;
 
-    border: 2px solid black;
+    text-align: center
 }
 
-.resume-int img {
-    width: 25vw;
-    object-fit: cover;
+.blabla-clock span {
+    font-family: 'Icomoon';
+    color: #000000;
 }
 
+.blabla-participant-total {
+    width: 99vw;
+
+    text-align: center
+}
+
+.blabla-participant-total span {
+    font-family: 'Icomoon';
+    color: #000000;
+}
+
+.blabla-participant-int {
+    width: 99vw;
+
+    text-align: center
+}
+
+.blabla-participant-int span {
+    font-family: 'Icomoon';
+    color: #000000;
+}

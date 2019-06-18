@@ -115,7 +115,7 @@ window.addEventListener('load', () => {
             let datas = new FormData(formulaire);
 
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'http://192.168.1.45/blablaterie/testingAjax.php', true);
+            xhr.open('GET', 'testing.Ajax.php', true);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             xhr.onreadystatechange = function () {
                 if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
