@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Création de compte</title>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://apis.google.com/js/api:client.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="map">
+    <h2 class="titre-page">Connexion</h2>
+    <section class="reseaux">
+        <form>
+            <input type="submit" value="Facebook" class="facebook" onclick="fbConnect()">
+            <input type="submit" value="Google" id="google">
+        </form>
+    </section>
+    <h2 class="creation-compte">Créer un compte</h2>
+    <section id="Logos">
+        <div class="logoGauche"></div>
+        <div class="logoDroite"></div>
+        <h1 class="logoTitre">Blablaterie</h1>
+    </section>
+    <section id="inscription">
+        <form action="interets.html">
+            <input type="text" placeholder="Mot de passe" class="login-mdp" name="mot-de-passe">
+            <input type="text" placeholder="E-mail" class="login-mail" name="email">
+            <input type="submit" value="Envoyer" class="login-confirm">
+        </form>
+    </section>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId            : '2251928224922036',
+                autoLogAppEvents : true,
+                xfbml            : true,
+                version          : 'v3.3'
+            });
+        };
+
+        function fbConnect() { 
+            FB.login(function(response) {
+                if (response.authResponse) {
+                    console.log('Welcome!  Fetching your information.... ');
+                    FB.api('/me', function(response) {
+                        console.log('Good to see you, ' + response.name + '.');
+                    });
+                } else {
+                    console.log('User cancelled login or did not fully authorize.');
+                }
+            });
+        }
+    </script>
+    <script>startApp();</script> 
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+</body>
+</html>
