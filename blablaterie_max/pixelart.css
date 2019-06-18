@@ -1,0 +1,27 @@
+body {
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    width: 1312px;
+    flex-wrap: wrap;
+}
+
+input {
+    display: none;
+}
+
+label {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+input + label {
+    background-color: darkslategrey;
+    border: 1px solid black;
+}
+
+input:checked + label {
+    background-color: navy;
+    border: 1px solid black;
+}

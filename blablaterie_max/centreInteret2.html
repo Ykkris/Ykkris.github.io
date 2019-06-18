@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/index.css">
+    <script src="scripts/script.js"></script>
+    <title>Centre d'intérêt</title>
+</head>
+<body>
+    <h1 class="config">Allons plus loin</h1>
+    <form action="accueil.html" method="POST" data-location="centreInteret2.html">
+        <div data-legend="Jeux-Vidéo" class="nuage">
+            <input type="checkbox" id="nuage1" name="interetNuage['JV'][]">
+            <label for="nuage1">FPS</label>
+            <input type="checkbox" id="nuage2" name="interetNuage['JV'][]">
+            <label for="nuage2">RPG</label>
+            <input type="checkbox" id="nuage3" name="interetNuage['JV'][]">
+            <label for="nuage3">Action</label>
+            <input type="checkbox" id="nuage4" name="interetNuage['JV'][]">
+            <label for="nuage4">Horreur</label>
+            <input type="checkbox" id="nuage5" name="interetNuage['JV'][]">
+            <label for="nuage5">Sport</label>
+            <input type="checkbox" id="nuage6" name="interetNuage['JV'][]">
+            <label for="nuage6">Onirique</label>
+        </div>
+        <div data-legend="Musiques" class="nuage">
+            <input type="checkbox" id="nuage7" name="interetNuage[]">
+            <label for="nuage7">Rock</label>
+            <input type="checkbox" id="nuage8" name="interetNuage[]">
+            <label for="nuage8">Jazz</label>
+            <input type="checkbox" id="nuage9" name="interetNuage[]">
+            <label for="nuage9">Electo</label>
+            <input type="checkbox" id="nuage10" name="interetNuage[]">
+            <label for="nuage10">Dub</label>
+            <input type="checkbox" id="nuage11" name="interetNuage[]">
+            <label for="nuage11">Rap</label>
+            <input type="checkbox" id="nuage12" name="interetNuage[]">
+            <label for="nuage12">OST</label>
+        </div>
+        <div data-legend="Religions" class="nuage">
+            <input type="checkbox" id="nuage13" name="interetNuage[]">
+            <label for="nuage13">Judaïsme</label>
+            <input type="checkbox" id="nuage14" name="interetNuage[]">
+            <label for="nuage14">Christianisme</label>
+            <input type="checkbox" id="nuage15" name="interetNuage[]">
+            <label for="nuage15">Islamisme</label>
+            <input type="checkbox" id="nuage16" name="interetNuage[]">
+            <label for="nuage16">Hindouisme</label>
+            <input type="checkbox" id="nuage17" name="interetNuage[]">
+            <label for="nuage17">Taoïsme</label>
+            <input type="checkbox" id="nuage18" name="interetNuage[]">
+            <label for="nuage18">Mithraïsme</label>
+        </div>
+        <input type="submit" name="continuer" value="Continuez" class="btnContinuer">
+    </form>
+    <script>
+        window.addEventListener('load', nuage);
+    </script>
+</body>
+</html>

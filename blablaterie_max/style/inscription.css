@@ -1,0 +1,132 @@
+@font-face {
+    font-family: "Luciole-Regular";
+    src: url("/fonts/Luciole-Regular.ttf") format("ttf");
+    
+    font-family: "Luciole-Bold";
+    src: url("/fonts/Luciole-Bold.ttf") format("ttf");
+}
+
+body {
+    background-color: #DDFFFD;
+    margin: 0;
+    height: 100vh;
+}
+
+#logo{
+    width: 375px;
+    height: 145px;
+    position: relative;
+    margin: 0;
+}
+
+.logoLeft {
+    height: 75px;
+    width: 90px;
+    background-color: #5CE5FF;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    left: 25%;
+}
+
+.logoLeft::after {
+    height: 20px;
+    width: 20px;
+    content: "";
+    display: block;
+    background-color: #5CE5FF;
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+}
+
+.logoRight {
+    height: 100px;
+    width: 120px;
+    background-color: #FEEB42;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    right: 25%;
+    mix-blend-mode: multiply;
+}
+
+.logoRight::after {
+    height: 20px;
+    width: 20px;
+    content: "";
+    display: block;
+    background-color: #FEEB42;
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+}
+
+.logoFond {
+    height: 100px;
+    width: 120px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    right: 25%;
+}
+
+.logoFond::after {
+    height: 20px;
+    width: 20px;
+    content: "";
+    display: block;
+    background-color: white;
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+}
+
+h1 {
+    color: #FEEB42;
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 21px;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 0;
+    padding-top: 40%;
+}
+
+.connexion {
+    background-color: rgba(92,229,255, 0.5);
+    font-family: 'Luciole-Regular', sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #262626;
+    margin-top: 19vh;
+    padding: 30px 40px;
+    
+}
+
+.nbBlablaterie {
+    font-family: 'Luciole-Bold', sans-serif;
+    color: #FEEB42;
+    background-color: #262626;
+    padding: 2px 10px;
+    border-radius: 20px;
+}
+
+a {
+    background: #FEEB42;
+    padding: 10px 40px;
+    border-radius: 20px;
+    box-shadow: 1px 4px 2px rgba(0, 0, 0, 0.25);
+    /*margin-bottom: 10px;*/
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #262626;
+    text-decoration: none;
+}

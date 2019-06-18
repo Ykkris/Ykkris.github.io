@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://apis.google.com/js/api:client.js"></script>
+    <script src="scripts/script.js"></script>
+    <script>
+            var googleUser = {};
+            var startApp = function() {
+              gapi.load('auth2', function(){
+                // Retrieve the singleton for the GoogleAuth library and set up the client.
+                auth2 = gapi.auth2.init({
+                  client_id: '243402918105-mii9hoveesie8i62iu72ump7l8lroi7u.apps.googleusercontent.com',
+                  cookiepolicy: 'single_host_origin',
+                  // Request scopes in addition to 'profile' and 'email'
+                  //scope: 'additional_scope'
+                });
+                attachSignin(document.getElementById('gSignInWrapper'));
+              });
+            };
+          
+            function attachSignin(element) {
+              console.log(element.id);
+              auth2.attachClickHandler(element, {},
+                  function(googleUser) {
+                      // TODO : vérifier si le user à un compte et gérer en fonction du cas
+                      console.log(googleUser);
+                      window.location="http://localhost:5500/centreInteret1.html"
+                    document.getElementById('name').innerText = "Signed in: " +
+                        googleUser.getBasicProfile().getName();
+                  }, function(error) {
+                    alert(JSON.stringify(error, undefined, 2));
+                  });
+            }
+    </script>          
+    <link rel="stylesheet" href="style/index.css">
+    <title>Blablaterie - Inscription</title>
+</head>
+<body id="inscription">
+    <!-- Logo -->
+    <section id="logo">
+        <div class="logoFond"></div>
+        <div class="logoLeft"></div>
+        <div class="logoRight"></div>    
+        <h1>Blablaterie</h1>
+    </section>
+    <section class="inscrire">
+        <h1>Inscription</h1>
+    <!-- Inscription via RS -->
+        <h2>Se connecter avec : </h2>
+        <!-- Connexion via Facebook -->
+        <a href="javascript:" id="FaceBook" onclick="fbConnect()">Facebook</a>
+        </div>
+        <!-- Connexion via Google -->
+        <a href="javascript:" id="gSignInWrapper">Google</a>
+        <div id="name"></div>
+        <script>startApp();</script>            
+    <!-- Inscription manuel -->
+        <h2>Sinon, inscrivez-vous ci-dessous :</h2>
+
+        <form action="centreInteret1.html" method="POST" data-location="inscription.html" >
+            <input type="text" name="user" placeholder ="Nom de l'utilisateur">
+            <input type="password" name="pwd" placeholder ="Mot de passe">
+            <input type="email" name=email placeholder ="Adresse email">
+            <input type="submit" name="continuer" value="Blablatez !" class="btnContinuer">
+        </form>
+    </section>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+            appId            : '1219222364951915',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v3.3'
+            });
+        };
+
+        function fbConnect() {
+            console.log(FB);
+            FB.login(function(response) {
+                if (response.authResponse) {
+                    window.location="http://localhost:5500/centreInteret1.html";
+                    // TODO
+                    // console.log('Welcome!  Fetching your information.... ');
+                    // FB.api('/me', function(response) {
+                    // console.log('Good to see you, ' + response.name + '.');
+                    //});
+                } else {
+                    console.log('User cancelled login or did not fully authorize.');
+                }
+            });
+        }
+    </script>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+</body>
+</html>

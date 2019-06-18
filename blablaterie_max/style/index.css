@@ -1,0 +1,812 @@
+@font-face {
+    font-family: "Luciole";
+    font-weight: normal;
+    src: url("../fonts/Luciole-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Luciole";
+    font-weight: bold;
+    src: url("../fonts/Luciole-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "IcoMoon";
+    font-weight: normal;
+    src: url("../fonts/icomoon.woff") format("woff");
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #DDFFFD;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Page de connexion */
+#carteFond #map {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#carteFond > #logo {
+    background: linear-gradient(180deg, rgba(16, 16, 16, 0.5183) 0%, rgba(16, 16, 16, 0) 100%);
+    width: 100vw;
+    height: 40vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    pointer-events: none;
+}
+
+#carteFond > #logo > .logoLeft {
+    height: 100px;
+    width: 120px;
+    background-color: #5CE5FF;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 5vh;
+    transform: translateX(25px);
+    z-index: 1;
+}
+
+#carteFond > #logo > .logoLeft::after {
+    height: 20px;
+    width: 20px;
+    content: "";
+    display: block;
+    background-color: #5CE5FF;
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+}
+
+#carteFond > #logo > .logoRight {
+    height: 100px;
+    width: 120px;
+    position: relative;
+    margin-top: 5vh;
+}
+
+#carteFond > #logo > .logoRight > .logoJaune {
+    height: 100px;
+    width: 120px;
+    background-color: #FEEB42;
+    border-radius: 50%;
+    position: relative;
+    mix-blend-mode: multiply;
+    transform: translateX(-25px);
+    z-index: 2;
+}
+
+#carteFond > #logo > .logoRight > .logoJaune::after {
+    height: 20px;
+    width: 20px;
+    content: "";
+    display: block;
+    background-color: #FEEB42;
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+}
+
+#carteFond > #logo > .logoRight > .logoBlanc {
+    height: 100px;
+    width: 120px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 0;
+    transform: translateX(-25px);
+}
+
+#carteFond > #logo > .logoRight > .logoBlanc::after {
+    height: 20px;
+    width: 20px;
+    content: "";
+    display: block;
+    background-color: white;
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+}
+
+#carteFond > #logo > h1 {
+    color: #FEEB42;
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 21px;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 10vh;
+}
+
+.connexion {
+    background-color: rgba(92,229,255, 0.5);
+    font-family: 'Luciole', sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #262626;
+    margin-top: 27vh;
+    padding: 30px 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;    
+}
+
+.nbBlablaterie {
+    font-family: 'Luciole', sans-serif;
+    font-weight: bold;
+    color: #FEEB42;
+    background-color: #262626;
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
+.btnContinuer {
+    background: #FEEB42;
+    padding: 10px 40px;
+    border-radius: 20px;
+    box-shadow: 1px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* Page d'inscription */
+#inscription > #logo {
+    width: 375px;
+    height: 120px;
+    position: relative;
+    margin: auto;
+}
+
+#inscription > #logo > .logoLeft {
+    height: 75px;
+    width: 90px;
+    background-color: #5CE5FF;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    left: 32%;
+}
+
+#inscription > #logo > .logoLeft::after {
+    height: 20px;
+    width: 20px;
+    content: "";
+    display: block;
+    background-color: #5CE5FF;
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+}
+
+#inscription > #logo > .logoRight {
+    height: 75px;
+    width: 90px;
+    background-color: #FEEB42;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    right: 32%;
+    mix-blend-mode: multiply;
+}
+
+#inscription > #logo > .logoRight::after {
+    height: 20px;
+    width: 20px;
+    content: "";
+    display: block;
+    background-color: #FEEB42;
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+}
+
+#inscription > #logo > .logoFond {
+    height: 75px;
+    width: 90px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    right: 32%;
+}
+
+#inscription > #logo > .logoFond::after {
+    height: 20px;
+    width: 20px;
+    content: "";
+    display: block;
+    background-color: white;
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+}
+
+#inscription > #logo > h1 {
+    color: #262626;
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 21px;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 0;
+    padding-top: 28%;
+}
+
+.inscrire > h1 {
+    font-family: "Luciole", sans-serif;
+    font-size: 36px;
+    text-align: center;
+    color: #333333;
+}
+
+h2 {
+    font-family: "Luciole", sans-serif;
+    font-weight: normal;
+    color: #333333;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+#FaceBook,
+#gSignInWrapper {
+    display: block;
+    margin: 0 25% 0 25%;
+    padding: 10px 40px;
+    border-radius: 20px;
+    box-shadow: 1px 4px 2px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#FaceBook {
+    background: #3B5998;
+}
+
+/* Accès via google */
+#gSignInWrapper {
+      background: #B23121;
+      margin-top: 2vh;
+}
+
+
+input {
+    display: block;
+    width: 200px;
+    height: 40px;
+    /* margin-bottom: 15px;
+    margin-left: 22%; */
+    margin: auto;
+    margin-bottom: 1vh;
+    border: 1px solid gray;
+}
+
+input[type=submit] {
+    color: #262626;
+    text-decoration: none;
+    font-family: 'Luciole', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #262626;
+    border: none;
+}
+
+/* Centre d'intérêt */
+.config {
+    font-family: "Luciole";
+    font-weight: normal;
+    font-size: 48px;
+    text-align: center;
+    margin: 0 10% 10% 10%;
+    color: #333333;
+    
+}
+
+.vignette {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.vignette [type="submit"]{
+    margin: 7vh 0 0 0;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+.vignette label {
+    display: block;
+    width: 27vw;
+    height: 27vw;
+    margin: 1vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip:  border-box;
+    box-sizing: border-box;
+    text-align: center;
+    color: #FEEB42;
+    font-family: "Luciole", sans-serif;
+}
+
+.vignette > input + label {
+    border: 1px solid black;
+}
+
+.vignette > input:checked + label {
+    border: 4px solid #FEEB42;
+}
+
+[for="vig1"] {
+    background-image: url("../img/vig1_cosplay.png");
+}
+
+[for="vig2"] {
+    background-image: url("../img/vig2_game.png");
+}
+
+[for="vig3"] {
+    background-image: url("../img/vig3_cinema.png");
+}
+
+[for="vig4"] {
+    background-image: url("../img/vig4_religion.png");
+}
+
+[for="vig5"] {
+    background-image: url("../img/vig5_pol.png");
+}
+
+[for="vig6"] {
+    background-image: url("../img/vig6_musique.png");
+}
+
+[for="vig7"] {
+    background-image: url("../img/vig7_informatique.png");
+}
+
+[for="vig8"] {
+    background-image: url("../img/vig8_livre.png");
+}
+
+[for="vig9"] {
+    background-image: url("../img/vig9_food.png");
+}
+
+/* Allons plus loin */
+.nuage {
+    background-color: #BEE0E8;
+    padding-top: 5vh;
+    position:relative;
+    border: 1px dimgray solid;
+    border-radius: 10px;
+    margin: 1vh 1vh 3vh 1vh;
+    font-family: 'Luciole';
+    color: #333333;
+    height: 25vh;
+}
+
+.nuage::before {
+    content:attr(data-legend);
+    display: block;
+    width: 100%;
+    position:absolute;
+    top: 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+
+}
+
+.nuage > input + label,
+.nuageLong > input + label {
+    border-bottom: 3px transparent solid;
+    padding: 0vh 2vh 0 2vh;
+    position: absolute;
+}
+
+.nuage > input:checked + label,
+.nuageLong > input:checked + label  {
+    font-weight: bold;
+    border-bottom: 3px #FEEB42 solid;
+    /* text-shadow: 4px 4px 2px rgba(0,0,0,0.6); */
+}
+
+/* Nuage 1 */
+[for="nuage1"] {
+    grid-column-start: 4;
+    grid-row-start: 2;
+}
+
+[for="nuage2"] {
+    grid-column-start: 3;
+    grid-row-start: 4;
+}
+
+[for="nuage3"] {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+[for="nuage4"] {
+    grid-column-start: 5;
+    grid-row-start: 1;
+}
+
+[for="nuage5"] {
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+[for="nuage6"] {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+/* Nuage 2 */
+[for="nuage7"] {
+    grid-column-start: 5;
+    grid-row-start: 4;
+}
+
+[for="nuage8"] {
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+[for="nuage9"] {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+[for="nuage10"] {
+    grid-column-start: 5;
+    grid-row-start: 1;
+}
+
+[for="nuage11"] {
+    grid-column-start: 2;
+    grid-row-start: 4;
+}
+
+[for="nuage12"] {
+    grid-column-start: 4;
+    grid-row-start: 3;
+}
+
+/* Nuage 3 */
+[for="nuage13"] {
+    grid-column-start: 2;
+    grid-row-start: 4;
+}
+
+[for="nuage14"] {
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
+[for="nuage15"] {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+[for="nuage16"] {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+[for="nuage17"] {
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+
+[for="nuage18"] {
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+
+/*  Accueil */
+
+/* Logo */ 
+header > #logo {
+    width: 90px;
+    height: 65px;
+    position: relative;
+    margin: 0;
+    margin-top: 3vh;
+}
+
+header > #logo > .logoLeft {
+    height: 47px;
+    width: 55px;
+    background-color: #5CE5FF;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+}
+
+header > #logo > .logoLeft::after {
+    height: 20px;
+    width: 20px;
+    content: "";
+    display: block;
+    background-color: #5CE5FF;
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+}
+
+header > #logo > .logoRight {
+    height: 47px;
+    width: 55px;
+    background-color: #FEEB42;
+    border-radius: 50%;
+    position: absolute;
+    top: 0%;
+    left: 32%;
+    mix-blend-mode: multiply;
+}
+
+header > #logo > .logoRight::after {
+    height: 20px;
+    width: 20px;
+    content: "";
+    display: block;
+    background-color: #FEEB42;
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+}
+
+header > #logo > .logoFond {
+    height: 47px;
+    width: 55px;    
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 32%;
+}
+
+header > #logo > .logoFond::after {
+    height: 20px;
+    width: 20px;
+    content: "";
+    display: block;
+    background-color: white;
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+}
+header > #logo > h1 {
+    font-family: 'FiraSans';
+    font-size: 12px;
+    color: #4F4F4F;
+    text-shadow: 1.20078px 2.40156px 6.00391px rgba(0, 0, 0, 0.5);
+    margin-top: 60%;
+    margin-left: 15%;
+}
+
+header {
+    display: flex;
+    margin: 0 3vh 0 3vh;
+    justify-content: space-between;
+}
+
+/* Menu */
+li {
+    list-style: none;
+
+}
+
+#menu ul {
+    display: block;
+    position: absolute;
+    /* transform: translateX(100vw); */
+    left: 100vw;
+    width: 0;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+    font-family: 'Luciole', sans-serif;
+    font-size: 14px;
+    line-height: 40px;
+    border-radius: 30px 30px 0 30px; 
+}
+#menu ul li:last-child {
+    font-size: 8px;
+}
+
+#menu ul li:first-child {
+    font-size: 10px;
+    font-style: italic;
+}
+
+#menu {
+    position: relative;
+    margin-top: 3vh;
+}
+
+#menu input {
+    display: none;
+}
+
+#menu input:checked ~ ul {
+    display: block;
+    transform: translateX(53vw) translateY(15vh);
+    transition: transform 0.5s ease;
+    left: 80%;
+    width: auto;
+    background-color: #EBEBEB;
+    margin-top: 0;
+    border: 2px #FEEB42 solid;
+    padding: 3vh 7vw 0 7vw;
+    z-index: 10000;
+}
+
+#menu label {
+    content: "MENU";
+    position: absolute;
+    height: 47px;
+    width: 55px;
+    background-color: #EBEBEB;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 47px;
+    color: #999999;
+    box-sizing: border-box;
+    z-index: 1;
+    /* transform: translateX(-50%); */
+}
+
+#menu label::after {
+    height: 20px;
+    width: 20px;
+    content: "";
+    display: block;
+    background-color: #EBEBEB;
+    position: absolute;
+    bottom: 5%;
+    left: 8%;
+    z-index: -1;
+}
+
+.carte {
+    display: block;
+    width: auto;
+    height: 30vh;
+    margin: 5vh 3vw auto 3vw;
+}
+
+.interetPerso,
+.interetPres {
+    font-family: 'Luciole', sans-serif;
+    color: #262626;
+}
+
+.interetPerso h1,
+.interetPres h1 {
+    font-size: 35px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.interetPerso a,
+.interetPres a {
+    display: grid;
+    grid-template-columns: 25fr 75fr;
+    grid-template-rows: 33fr 67fr;
+    grid-template-areas: "img titre"
+        "info info";
+    width: auto;
+    background-color: white;
+    margin: 5vh 3vw auto 3vw;
+    box-shadow: 2px 5px 5px grey;
+}
+
+img{
+    width: 20vw;
+    grid-area: img;
+    margin: auto;
+}
+
+.interetPerso h2,
+.interetPres h2 {
+    grid-area: titre;
+    font-size: 25px;
+    text-align: center;
+}
+
+.interetPerso ul,
+.interetPres ul {
+    grid-area: info;
+    padding-left: 2vw;
+    margin-top: 0;
+}
+
+.interetPerso ul li,
+.interetPres ul li{
+    margin-top: 2vh;
+}
+
+.interetPerso ul li span:first-child,
+.interetPres ul li span:first-child{
+    font-family: 'IcoMoon';
+}
+
+.details {
+    font-weight: bold;
+    text-align: center;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #262626;
+    text-decoration: none;
+}
+
+/* Détail d'un lieu*/
+
+.infoSup {
+    background: #999999;
+    font-family: 'Luciole', sans-serif;
+    width: 85%;
+    height: 90%;
+    border-radius: 20px;
+    padding: 3% 5%;
+    position: fixed;
+    top: 2vh;
+    bottom: 2vh;
+    left: 2vw;
+    right: 2vw;
+}
+
+.infoSup div:first-child {
+    font-family: 'IcoMoon';
+    text-align: right;
+}
+
+.infoSup h2 {
+    color: #FEEB42;
+    font-weight: bold;
+}
+
+.heart:link,
+.heart:hover,
+.heart:visited,
+.heart:active {
+    color: white;
+}
+
+.actif:link,
+.actif:hover,
+.actif:visited,
+.actif:active {
+    color: #B23121;
+}
+
+.infoSup img:first-child{
+    width: 30vw;
+}
